@@ -1,5 +1,54 @@
-<html>
-<body>
-    <a href="/test-circuit">test-circuit</a>
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Real Racers</title>
+    
+    <!-- Stylesheets  -->
+    <link type="text/css" href="stylesheets/reset.css" rel="Stylesheet">
+    <link type="text/css" href="stylesheets/custom_reset.css" rel="Stylesheet">
+    <link type="text/css" href="stylesheets/app.css" rel="Stylesheet">
+
+    <!-- Libraries  -->
+    <script type='text/javascript' src='./javascripts/lib/OpenLayers.js'></script>
+
+    <!-- Gui  -->
+    <script type='text/javascript' src='./javascripts/gui/main.js'></script>
+    <script type='text/javascript' src='./javascripts/gui/map.js'></script>
+    
+    <!-- Game Engine  -->
+    <script type='text/javascript' src='./javascripts/gameEngine/main.js'></script>
+    <script type='text/javascript' src='./javascripts/gameEngine/init.js'></script>
+    <script type='text/javascript' src='./javascripts/gameEngine/splash.js'></script>
+    <script type='text/javascript' src='./javascripts/gameEngine/countdown.js'></script>
+    <script type='text/javascript' src='./javascripts/gameEngine/carSpeedCalculator.js'></script>
+    <script type='text/javascript' src='./javascripts/gameEngine/race.js'></script>
+    <script type='text/javascript' src='./javascripts/gameEngine/finish.js'></script>
+
+
+</head>
+<body onresize="onBodyResize();" >
+    <div id="main">
+        <div id="map"></div>
+        <div id="speed">speed</div>
+        <div id="rpm">rpm</div>
+        <div id="speedUp">Up</div>
+        <div id="brake"></div>
+        <div id="car"></div>
+        <div id="raceSummary">
+            <div id="raceSummaryButtons"> 
+            <img id="raceSummaryBack" src="./images/splashBack.png" onclick="splashUserClickBack = true;" >
+            <img id="raceSummaryRace" src="./images/splashRace.png" onclick="splashUserClickRace = true;" >
+            <img id="raceSummaryMore" src="./images/splashMore.png" onclick="splashUserClickMore = true;" >
+            <img id="raceSummaryOnline" src="./images/splashOnline.png" onclick="splashUserClickOnline = true;" >
+            </div>
+            <div id="raceSummaryContent"></div>
+        </div>
+        <div id="countDown"></div>
+        <div id="debugWindow">development version</div>
+    </div>
 </body>
 </html>
+
+
